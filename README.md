@@ -1,61 +1,56 @@
-🆔 RENIEC-Simulado
-RENIEC-Simulado es una aplicación web de prueba desarrollada con React que simula un panel de gestión de usuarios como si fuera un sistema del RENIEC. Fue creada con fines educativos para practicar operaciones CRUD, autenticación simulada y el consumo de APIs REST.
+# 🆔 RENIEC-Simulado
 
-📌 Descripción General
-Aplicación tipo panel administrativo que permite crear, leer, editar y eliminar usuarios usando una API REST simulada (JSONPlaceholder). Incluye sistema de login, navegación entre vistas, búsqueda en tiempo real y persistencia de sesión con localStorage.
+**RENIEC-Simulado** es una aplicación web de prueba desarrollada con **React** que simula un panel de gestión de usuarios como si fuera un sistema del RENIEC. Fue creada con fines educativos para practicar operaciones CRUD, autenticación simulada y el consumo de APIs REST.
 
-🚀 Funcionalidades Principales
-🔐 Login simulado (usuario: admin, contraseña: 1234)
+---
 
-📋 Visualización de usuarios en una tabla
+## 📌 Descripción General
 
-📝 Registro y edición de usuarios (POST y PATCH)
+> Aplicación tipo panel administrativo que permite **crear**, **leer**, **editar** y **eliminar** usuarios usando una API REST simulada (JSONPlaceholder). Incluye sistema de login, navegación entre vistas, búsqueda en tiempo real y persistencia de sesión con `localStorage`.
 
-❌ Eliminación de usuarios (DELETE)
+---
 
-🔍 Filtros y búsqueda por ciudad o empresa
+## 🚀 Funcionalidades Principales
 
-📁 Menú lateral con navegación entre vistas
+- 🔐 Login simulado (usuario: `admin`, contraseña: `1234`)
+- 📋 Visualización de usuarios en una tabla
+- 📝 Registro y edición de usuarios (POST y PATCH)
+- ❌ Eliminación de usuarios (DELETE)
+- 🔍 Filtros y búsqueda por ciudad o empresa
+- 📁 Menú lateral con navegación entre vistas
+- 💾 Persistencia de sesión en `localStorage`
+- ✅ Rutas protegidas con `PrivateRoute`
+- ⚙️ Separación por carpetas limpias
 
-💾 Persistencia de sesión en localStorage
+---
 
-✅ Rutas protegidas con PrivateRoute
+## 🛠️ Tecnologías Usadas
 
-⚙️ Separación por carpetas limpias
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [Axios](https://axios-http.com/)
+- [React Router DOM](https://reactrouter.com/)
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/users) (API simulada)
+- [Ant Design](https://ant.design/) o [Material UI](https://mui.com/) (UI opcional)
 
-🛠️ Tecnologías Usadas
-React
+---
 
-Vite
-
-JavaScript
-
-Axios
-
-React Router DOM
-
-JSONPlaceholder (API simulada)
-
-Ant Design o Material UI (UI opcional)
-
-
-📂 Estructura Recomendada
-bash
-Copiar
-Editar
+## 📂 Estructura Recomendada
 /src
- ├── components/
- ├── pages/
- ├── routes/
- ├── services/
- ├── utils/
- └── App.jsx
+├── components/
+├── pages/
+├── routes/
+├── services/
+├── utils/
+└── App.jsx
 
 
- 🔄 Instalación y Uso
-bash
-Copiar
-Editar
+---
+
+## 🔄 Instalación y Uso
+
+```bash
 # Crear el proyecto
 npm create vite@latest
 
@@ -72,4 +67,3 @@ npm install axios
 
 # Ejecutar la app
 npm run dev
-
