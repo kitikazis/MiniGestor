@@ -1,25 +1,29 @@
-Aplicación web de prueba desarrollada con React que simula un panel de gestión de usuarios del sistema RENIEC. Permite realizar operaciones CRUD (Crear, Leer, Editar y Eliminar) sobre una API REST falsa, además de contar con un sistema de login simulado, navegación entre vistas y una interfaz intuitiva.
+🆔 RENIEC-Simulado
+RENIEC-Simulado es una aplicación web de prueba desarrollada con React que simula un panel de gestión de usuarios como si fuera un sistema del RENIEC. Fue creada con fines educativos para practicar operaciones CRUD, autenticación simulada y el consumo de APIs REST.
 
-La app incluye:
+📌 Descripción General
+Aplicación tipo panel administrativo que permite crear, leer, editar y eliminar usuarios usando una API REST simulada (JSONPlaceholder). Incluye sistema de login, navegación entre vistas, búsqueda en tiempo real y persistencia de sesión con localStorage.
 
-Inicio de sesión básico (usuario: admin, contraseña: 1234)
+🚀 Funcionalidades Principales
+🔐 Login simulado (usuario: admin, contraseña: 1234)
 
-Interfaz con menú lateral y múltiples vistas
+📋 Visualización de usuarios en una tabla
 
-Tabla de usuarios con filtros y búsqueda en tiempo real
+📝 Registro y edición de usuarios (POST y PATCH)
 
-Formulario para registrar y editar usuarios
+❌ Eliminación de usuarios (DELETE)
 
-Persistencia de sesión con localStorage
+🔍 Filtros y búsqueda por ciudad o empresa
 
-Uso de axios para el consumo de la API JSONPlaceholder
+📁 Menú lateral con navegación entre vistas
 
-Ruteo protegido con react-router-dom
+💾 Persistencia de sesión en localStorage
 
-Interfaz responsive con librerías UI como Ant Design o Material UI
+✅ Rutas protegidas con PrivateRoute
 
-Tecnologías usadas:
+⚙️ Separación por carpetas limpias
 
+🛠️ Tecnologías Usadas
 React
 
 Vite
@@ -30,4 +34,42 @@ Axios
 
 React Router DOM
 
-JSONPlaceholder (API fake)
+JSONPlaceholder (API simulada)
+
+Ant Design o Material UI (UI opcional)
+
+
+📂 Estructura Recomendada
+bash
+Copiar
+Editar
+/src
+ ├── components/
+ ├── pages/
+ ├── routes/
+ ├── services/
+ ├── utils/
+ └── App.jsx
+
+
+ 🔄 Instalación y Uso
+bash
+Copiar
+Editar
+# Crear el proyecto
+npm create vite@latest
+
+# Seleccionar React + JavaScript
+
+# Ir al proyecto
+cd <nombre-del-proyecto>
+
+# Instalar dependencias
+npm install
+
+# Instalar Axios
+npm install axios
+
+# Ejecutar la app
+npm run dev
+
