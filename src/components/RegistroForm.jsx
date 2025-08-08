@@ -128,10 +128,16 @@ export default function RegistroForm({ defaultData, onSave, onClose }) {
               marginTop: 8,
             }}
           >
-            <button type="button" onClick={onClose}>
-              Cancelar
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={onClose}
+            >
+              <i className="bi bi-x-circle"></i> Cancelar
             </button>
-            <button type="submit">Guardar</button>
+            <button type="submit" className="btn btn-success">
+              <i className="bi bi-save"></i> Guardar
+            </button>
           </div>
         </form>
       </div>

@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import useLocalStorage from "../hooks/useLocalStorage";
 import RegistroForm from "./RegistroForm";
-
+import "bootstrap-icons/font/bootstrap-icons.css";
+import registrosJson from "../data/registros.json";
 /**
  * DataTable con:
  * - Modal para registrar/editar
@@ -10,12 +12,15 @@ import RegistroForm from "./RegistroForm";
  * - Mostrar fechaRegistro con hora
  */
 export default function DataTable() {
-  const [data, setData] = useLocalStorage("registros", []);
+  const [data, setData] = useLocalStorage("registros", [registrosJson]);
   const [search, setSearch] = useState("");
-  const [startDate, setStartDate] = useState(""); // formato yyyy-mm-dd
+  const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [editing, setEditing] = useState(null);
+
+  const navigate = useNavigate();
+  const { id } = useParams();
 
   const formatFechaDDMMYYYY = (isoOrDate) => {
     if (!isoOrDate) return "";
@@ -64,13 +69,18 @@ export default function DataTable() {
   };
 
   return (
+    // ...existing code...
+
+    // ...existing code...
     <div style={{ padding: 12 }}>
       <h2>Registros</h2>
 
       <div
         style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}
       >
-        <button onClick={openNew}>Registrar</button>
+        <button className="btn btn-success" onClick={openNew}>
+          <i className="bi bi-plus-circle"></i> Registrar
+        </button>
 
         <input
           placeholder="Buscar nombre o apellido"
@@ -98,23 +108,25 @@ export default function DataTable() {
         </label>
 
         <button
+          className="btn btn-secondary"
           onClick={() => {
             setSearch("");
             setStartDate("");
             setEndDate("");
           }}
         >
-          Limpiar
+          <i className="bi bi-x-circle"></i> Limpiar
         </button>
       </div>
 
       <div style={{ overflowX: "auto" }}>
         <table
+          className="table table-bordered table-hover"
           style={{ width: "100%", borderCollapse: "collapse" }}
           border="1"
           cellPadding="8"
         >
-          <thead style={{ background: "#f3f3f3" }}>
+          <thead className="table-light">
             <tr>
               <th>Nombre</th>
               <th>Apellido</th>
@@ -142,12 +154,20 @@ export default function DataTable() {
                   <td>{item.edad}</td>
                   <td>{item.fechaRegistro}</td>
                   <td>
-                    <button onClick={() => openEdit(item)}>Editar</button>
                     <button
+                      className="btn btn-warning btn-sm"
+                      onClick={() => openEdit(item)}
+                      title="Editar"
+                    >
+                      <i className="bi bi-pencil-square"></i>
+                    </button>
+                    <button
+                      className="btn btn-danger btn-sm"
                       onClick={() => handleDelete(item.id)}
                       style={{ marginLeft: 8 }}
+                      title="Eliminar"
                     >
-                      Eliminar
+                      <i className="bi bi-trash"></i>
                     </button>
                   </td>
                 </tr>
@@ -156,6 +176,7 @@ export default function DataTable() {
           </tbody>
         </table>
       </div>
+      {/* ...existing code... */}
 
       {showModal && (
         <RegistroForm

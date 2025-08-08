@@ -1,10 +1,11 @@
-{
-  "id": "uuid-único",
-  "nombre": "Ronal",
-  "apellido": "Asencio",
-  "fechaNacimiento": "2006-05-13",
-  "ocupacion": "Estudiante de Ingeniería de Software",
-  "edad": 19,
-  "fechaRegistro": "09-08-2025 14:35:22"
-}
-        
+[
+  {
+    "id": "uuid-único",
+    "nombre": "Ronal",
+    "apellido": "Asencio",
+    "fechaNacimiento": "2006-05-13",
+    "ocupacion": "Estudiante de Ingeniería de Software",
+    "edad": 19,
+    "fechaRegistro": "09-08-2025 14:35:22"
+  }
+]
