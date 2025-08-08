@@ -1,69 +1,12 @@
-# 🆔 RENIEC-Simulado
+# React + Vite
 
-**RENIEC-Simulado** es una aplicación web de prueba desarrollada con **React** que simula un panel de gestión de usuarios como si fuera un sistema del RENIEC. Fue creada con fines educativos para practicar operaciones CRUD, autenticación simulada y el consumo de APIs REST.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 📌 Descripción General
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-> Aplicación tipo panel administrativo que permite **crear**, **leer**, **editar** y **eliminar** usuarios usando una API REST simulada (JSONPlaceholder). Incluye sistema de login, navegación entre vistas, búsqueda en tiempo real y persistencia de sesión con `localStorage`.
+## Expanding the ESLint configuration
 
----
-
-## 🚀 Funcionalidades Principales
-
-- 🔐 Login simulado (usuario: `admin`, contraseña: `1234`)
-- 📋 Visualización de usuarios en una tabla
-- 📝 Registro y edición de usuarios (POST y PATCH)
-- ❌ Eliminación de usuarios (DELETE)
-- 🔍 Filtros y búsqueda por ciudad o empresa
-- 📁 Menú lateral con navegación entre vistas
-- 💾 Persistencia de sesión en `localStorage`
-- ✅ Rutas protegidas con `PrivateRoute`
-- ⚙️ Separación por carpetas limpias
-
----
-
-## 🛠️ Tecnologías Usadas
-
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
-- [Axios](https://axios-http.com/)
-- [React Router DOM](https://reactrouter.com/)
-- [JSONPlaceholder](https://jsonplaceholder.typicode.com/users) (API simulada)
-- [Ant Design](https://ant.design/) o [Material UI](https://mui.com/) (UI opcional)
-
----
-
-## 📂 Estructura Recomendada
-/src
-├── components/
-├── pages/
-├── routes/
-├── services/
-├── utils/
-└── App.jsx
-
-
----
-
-## 🔄 Instalación y Uso
-
-```bash
-# Crear el proyecto
-npm create vite@latest
-
-# Seleccionar React + JavaScript
-
-# Ir al proyecto
-cd <nombre-del-proyecto>
-
-# Instalar dependencias
-npm install
-
-# Instalar Axios
-npm install axios
-
-# Ejecutar la app
-npm run dev
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
