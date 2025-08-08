@@ -5,13 +5,15 @@ export default function Sidebar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <aside style={{
-      padding: "1rem",
-      borderRight: "1px solid gray",
-      minWidth: "200px",
-      background: theme === "light" ? "#f9f9f9" : "#222",
-      color: theme === "light" ? "#000" : "#fff"
-    }}>
+    <aside
+      style={{
+        padding: "1rem",
+        borderRight: "1px solid gray",
+        minWidth: "200px",
+        background: theme === "light" ? "#f9f9f9" : "#222",
+        color: theme === "light" ? "#000" : "#fff",
+      }}
+    >
       <h2>Menú</h2>
       <nav>
         <Link to="/">Inicio</Link> <br />

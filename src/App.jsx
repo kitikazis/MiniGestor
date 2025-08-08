@@ -1,16 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
+import DataTable from "./components/DataTable";
+import RegistroForm from "./components/RegistroForm";
 
 function Home() {
   return <h1>Inicio</h1>;
 }
 
 function Tabla() {
-  return <h1>Vista de Tabla</h1>;
+  return <DataTable />;
 }
 
 function Registro() {
-  return <h1>Formulario de Registro</h1>;
+  return <RegistroForm />;
 }
 
 export default function App() {
